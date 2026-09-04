@@ -14,11 +14,11 @@ class ContactFactory extends Factory
             'first_name' => fake()->firstName(),
             'last_name' => fake()->lastName(),
             'gender' => fake()->randomElement([1, 2, 3]),
-            'email' => fake()->email(),
+            'email' => fake()->unique->safeEmail(),
             'tel' => fake()->numerify('00000000000'),
             'address' => fake()->address(),
             'building' => fake()->secondaryAddress(),
-            'detail' => fake()->sentence(),
+            'detail' => fake()->realText(100),
         ];
     }
 }
