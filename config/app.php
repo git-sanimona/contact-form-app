@@ -100,7 +100,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'ja_JP',
+    'fallback_locale' => 'en',
 
     /*
     |--------------------------------------------------------------------------
@@ -113,7 +113,7 @@ return [
     |
     */
 
-    'faker_locale' => 'en_US',
+    'faker_locale' => 'ja_JP',
 
     /*
     |--------------------------------------------------------------------------
@@ -169,9 +169,11 @@ return [
              */
         AppServiceProvider::class,
         AuthServiceProvider::class,
-            // App\Providers\BroadcastServiceProvider::class,
+            // App\Providers\BroadcastServi,ceProvider::class
         EventServiceProvider::class,
         RouteServiceProvider::class,
+        App\Providers\FortifyServiceProvider::class,
+
     ])->toArray(),
 
     /*
